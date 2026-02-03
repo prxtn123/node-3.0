@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // For custom domain (nodehub.uk)
+  base: "/praxis-website/", // For GitHub Pages at /praxis-website/
   server: {
     host: "::",
     port: 8080,
