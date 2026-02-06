@@ -28,6 +28,7 @@ After running `npm run build`, you'll get:
 ```
 dist/
 ├── index.html              ← Production HTML (this is your entry point!)
+├── 404.html                ← Hash routing fallback for static hosting
 ├── assets/
 │   ├── index-[hash].js    ← Bundled JavaScript
 │   ├── index-[hash].css   ← Bundled CSS
@@ -63,8 +64,21 @@ ls -la dist/
 
 You should see:
 - ✅ index.html
+- ✅ 404.html
 - ✅ assets/ folder with .js and .css files
 - ✅ Static assets (images, etc.)
+
+## 🔧 Important: Hash Routing
+
+**This app uses hash-based routing** to work on static hosting platforms like nodehub.uk.
+
+### What this means:
+- URLs will include a `#`, like: `https://yoursite.com/#/privacy`
+- All routes work without server configuration
+- The app was switched from `BrowserRouter` to `HashRouter` to fix the blank page issue
+
+### Why?
+Static hosts can't redirect URLs like `/privacy` to `/index.html`. Hash routing solves this by making all navigation client-side, so only `index.html` is requested from the server.
 
 ## 🚀 Deploy!
 

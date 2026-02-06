@@ -39,6 +39,7 @@ npm run build
 ```
 dist/
 ├── index.html          ← YOUR PUBLISHING ENTRY POINT
+├── 404.html            ← Hash routing fallback
 ├── assets/
 │   ├── index-*.js      ← Bundled JavaScript
 │   ├── index-*.css     ← Bundled CSS
@@ -54,9 +55,32 @@ dist/
 
 ---
 
+## ✨ Fixed: Blank Page Issue
+
+**Problem:** The page was showing blank white after deployment to nodehub.uk.
+
+**Root Cause:** The app was using `BrowserRouter` which requires server-side URL rewriting. Static hosts like nodehub.uk don't support this.
+
+**Solution:** Switched to `HashRouter` which works on all static hosting platforms by using hash-based URLs (e.g., `#/privacy` instead of `/privacy`).
+
+### What changed:
+- ✅ `src/App.tsx` - Now uses `HashRouter` instead of `BrowserRouter`
+- ✅ `public/404.html` - Updated to redirect to hash-based routes
+- ✅ All routes now work: `/` → `/#/`, `/privacy` → `/#/privacy`, etc.
+
+### URLs will now look like:
+- Home: `https://yoursite.com/` or `https://yoursite.com/#/`
+- Privacy: `https://yoursite.com/#/privacy`
+- Terms: `https://yoursite.com/#/terms`
+- GDPR: `https://yoursite.com/#/gdpr`
+
+This is the standard approach for React apps on static hosts and ensures your site works everywhere!
+
+---
+
 ## 📚 More Information
 
-- **[PUBLISHING_GUIDE.md](./PUBLISHING_GUIDE.md)** - Complete publishing guide with all details
+- **[PUBLISHING_GUIDE.md](./PUBLISHING_GUIDE.md)** - Complete publishing guide with hash routing details
 - **[docs/INDEX_FILES.md](./docs/INDEX_FILES.md)** - Quick reference for developers
 - **[README.md](./README.md)** - Project overview and setup
 
