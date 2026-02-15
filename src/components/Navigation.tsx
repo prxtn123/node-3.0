@@ -55,10 +55,10 @@ export const Navigation = () => {
             onClick={() => handleNavClick("home")} 
             className="flex items-center gap-2"
           >
-            <span className={`font-semibold text-xl tracking-tight transition-colors ${
+            <span className={`font-semibold text-2xl tracking-tight transition-colors ${
               isScrolled || isLightPage ? "text-foreground" : "text-white"
             }`}>
-              node
+              .node
             </span>
           </button>
 
