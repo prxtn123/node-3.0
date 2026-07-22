@@ -97,12 +97,12 @@ export default function Homepage() {
                 Praxis GB builds computer vision applications that solve real-world problems — across industries, environments, and use cases. We handle the technology so you can focus on the outcome.
               </p>
               <div className="reveal flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                <Link
-                  to="/node"
+                <a
+                  href="https://nodehub.uk"
                   className="inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold tracking-wide text-black transition-all hover:bg-white/90 active:scale-95"
                 >
                   See node →
-                </Link>
+                </a>
                 <span className="text-sm text-white/30">
                   Edge-deployed. No cloud required.
                 </span>
