@@ -25,26 +25,26 @@ export default function NavBar() {
         <Link
           to="/"
           className={`transition-opacity duration-200 ${
-            location.pathname === "/" ? "opacity-100" : "opacity-50 hover:opacity-100"
+            location.pathname === "/" ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
         >
           <img
             src="/praxis-logo.png"
             alt="Praxis GB"
-            className="h-5 w-auto"
+            className="h-[130px] w-auto"
           />
         </Link>
 
         <Link
           to="/node"
           className={`transition-opacity duration-200 ${
-            onNode ? "opacity-100" : "opacity-50 hover:opacity-100"
+            onNode ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
         >
           <img
             src="/node-logo-compact.png"
             alt=".node"
-            className="h-5 w-auto"
+            className="h-[20px] w-auto"
           />
         </Link>
       </div>
