@@ -21,23 +21,23 @@ export default function NavBar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-[18px] md:px-10">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-3 md:px-10 md:py-[18px]">
         <Link
           to="/"
-          className={`transition-opacity duration-200 ${
+          className={`shrink-0 transition-opacity duration-200 ${
             location.pathname === "/" ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
         >
           <img
             src="/praxis-logo.png"
             alt="Praxis GB"
-            className="h-[130px] w-auto"
+            className="h-10 w-auto sm:h-12 md:h-[117px]"
           />
         </Link>
 
         <Link
           to="/node"
-          className={`transition-opacity duration-200 ${
+          className={`shrink-0 transition-opacity duration-200 ${
             onNode ? "opacity-100" : "opacity-70 hover:opacity-100"
           }`}
         >
