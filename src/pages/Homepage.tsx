@@ -82,7 +82,7 @@ export default function Homepage() {
             className="pointer-events-none absolute inset-y-0 left-[58%] hidden w-px bg-white/[0.05] lg:block"
           />
 
-          <div className="relative mx-auto grid max-w-[1200px] min-h-screen grid-cols-1 items-center gap-8 px-6 pb-16 pt-36 md:px-10 lg:grid-cols-[1fr_400px] lg:pt-24">
+          <div className="relative mx-auto grid max-w-[1200px] min-h-screen grid-cols-1 items-center gap-8 px-6 pb-16 pt-44 md:px-10 md:pt-48 lg:grid-cols-[1fr_400px] lg:pt-44">
             {/* Left */}
             <div className="flex flex-col justify-center space-y-10">
               <p className="reveal text-[10px] font-semibold uppercase tracking-[0.44em] text-blue-400">
