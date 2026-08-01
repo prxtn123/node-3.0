@@ -98,7 +98,7 @@ export default function Homepage() {
               </p>
               <div className="reveal flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <a
-                  href="https://nodehub.uk"
+                  href="https://nodehub.uk/node"
                   className="inline-flex items-center justify-center rounded-sm bg-white px-8 py-4 text-sm font-semibold tracking-wide text-black transition-all hover:bg-white/90 active:scale-95"
                 >
                   See node →
